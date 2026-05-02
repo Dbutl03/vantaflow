@@ -6,6 +6,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
+app.get("/", (req, res) => {
+  res.send("Backend is live ✅");
+});
 const replicate = new Replicate({
   auth: process.env.REPLICATE_API_TOKEN
 });
